@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Features from '../components/Features.astro';
+---
+
+<Layout 
+  title="初めての方へ | 鍼灸院BiO" 
+  description="鍼灸院BiOに初めてご来院される方へ、予約から施術までの流れや特徴をご説明します。">
+  
+  <main class="pt-20 font-mincho">
+    <!-- 初めての方へセクション -->
+    <section class="py-20 bg-[#f5f5ef]">
+      <div class="container mx-auto px-4">
+        <h1 class="section-title">初めての方へ</h1>
+
+        <Features />
+
+        <!-- 施術の流れ -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8 mt-8">
+          <h2 class="text-2xl font-bold text-[#00479D] mb-8 text-center">施術の流れ</h2>
+          <p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            初めての方でも安心してご来院いただけるよう、施術の流れをご説明いたします。<br>ご不明な点がございましたら、お気軽にお問い合わせください。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 予約 -->
+            <div class="relative">
+              <div class="bg-[#EBF5FF] rounded-lg p-6 h-full">
+                <div class="w-16 h-16 bg-[#00479D] rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-center text-[#00479D] mb-3">ご予約</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>・Web予約</li>
+                  <li>・LINE予約</li>
+                  <li>・問診票の記入</li>
+                </ul>
+              </div>
+              <div class="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
+                <svg class="w-8 h-8 text-[#00479D]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 問診・カウンセリング -->
+            <div class="relative">
+              <div class="bg-[#FFE8E8] rounded-lg p-6 h-full">
+                <div class="w-16 h-16 bg-[#E53E3E] rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-center text-[#E53E3E] mb-3">問診・カウンセリング</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>・症状の確認</li>
+                  <li>・生活習慣の確認</li>
+                  <li>・治療方針の説明</li>
+                  <li>・ご要望の確認</li>
+                </ul>
+              </div>
+              <div class="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
+                <svg class="w-8 h-8 text-[#E53E3E]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 施術 -->
+            <div class="relative">
+              <div class="bg-[#F3E8FF] rounded-lg p-6 h-full">
+                <div class="w-16 h-16 bg-[#805AD5] rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-center text-[#805AD5] mb-3">施術</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>・鍼灸施術</li>
+                  <li>・整体施術</li>
+                  <li>・各種治療</li>
+                </ul>
+              </div>
+              <div class="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
+                <svg class="w-8 h-8 text-[#805AD5]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- アフターケア -->
+            <div>
+              <div class="bg-[#FEFCE8] rounded-lg p-6 h-full">
+                <div class="w-16 h-16 bg-[#EAB308] rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-center text-[#EAB308] mb-3">アフターケア</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>・施術後の説明</li>
+                  <li>・ホームケア指導</li>
+                  <li>・次回予約</li>
+                  <li>・経過観察</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- よくある質問 -->
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <h2 class="text-2xl font-bold text-[#00479D] mb-6">よくある質問</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+              <div class="border-b pb-4">
+                <h3 class="font-bold mb-2">鍼は痛いですか？</h3>
+                <p class="text-gray-600">当院では、極細の鍼を使用し、痛みを最小限に抑えた施術を行っています。もし痛みの伴う鍼がありましたら我慢せずにお声かけください。</p>
+              </div>
+              <div class="border-b pb-4">
+                <h3 class="font-bold mb-2">施術時間はどのくらいですか？</h3>
+                <p class="text-gray-600">初回は問診時間を含めて約60分程度です。症状や施術内容により、時間は変動する場合があります。</p>
+              </div>
+              <div class="border-b pb-4">
+                <h3 class="font-bold mb-2">保険は使えますか？</h3>
+                <p class="text-gray-600">当院では保険の利用ができませんのでご了承ください。</p>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="border-b pb-4">
+                <h3 class="font-bold mb-2">予約は必要ですか？</h3>
+                <p class="text-gray-600">はい、予約制となっています。LINE、Web予約からご予約ください。当日予約も可能な場合があります。</p>
+              </div>
+              <div class="border-b pb-4">
+                <h3 class="font-bold mb-2">施術後の注意点はありますか？</h3>
+                <p class="text-gray-600">具体的な注意点は、施術後に詳しくご説明いたします。</p>
+              </div>
+              <div class="mt-8">
+                <img src="/src/images/14.jpg" alt="施術室の様子" class="w-full h-48 object-cover rounded-lg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/menu-detail" class="btn-primary">
+            メニュー詳細を見る
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .font-mincho {
+    font-family: 'Shippori Mincho', serif;
+  }
+</style> 

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="施術の流れ | 鍼灸院BiO" 
+  description="鍼灸院BiOの施術の流れをご説明します。初めての方でも安心してご利用いただけるよう、詳しい手順をご紹介しています。">
+  
+  <main class="pt-20">
+    <section class="py-20 bg-[#f5f5ef]">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title">施術の流れ</h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <!-- ステップ1：受付・問診票記入 -->
+          <div class="relative flex flex-col md:flex-row gap-8 mb-12">
+            <div class="w-full md:w-1/3 flex flex-col items-center">
+              <div class="bg-[#00479D] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
+              <h3 class="text-xl font-bold mb-2 text-center">受付・問診票記入</h3>
+            </div>
+            <div class="w-full md:w-2/3 bg-white rounded-lg shadow-md p-6">
+              <p class="text-gray-600 mb-4">
+                ご来院後、受付にて問診票をご記入いただきます。症状や気になる点、既往歴などをできるだけ詳しくお書きください。
+              </p>
+              <ul class="list-disc list-inside text-gray-600">
+                <li>初めての方は10分程度余裕を持ってお越しください</li>
+                <li>保険証をお持ちの方はご提示ください</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ステップ2：カウンセリング -->
+          <div class="relative flex flex-col md:flex-row gap-8 mb-12">
+            <div class="w-full md:w-1/3 flex flex-col items-center">
+              <div class="bg-[#00479D] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">2</div>
+              <h3 class="text-xl font-bold mb-2 text-center">カウンセリング</h3>
+            </div>
+            <div class="w-full md:w-2/3 bg-white rounded-lg shadow-md p-6">
+              <p class="text-gray-600 mb-4">
+                問診票をもとに、より詳しくお話をお伺いします。症状の原因や生活習慣について一緒に考えていきます。
+              </p>
+              <ul class="list-disc list-inside text-gray-600">
+                <li>現在の症状や気になる点を詳しくお聞きします</li>
+                <li>生活習慣や仕事内容についてもお伺いします</li>
+                <li>治療方針について説明させていただきます</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ステップ3：施術 -->
+          <div class="relative flex flex-col md:flex-row gap-8 mb-12">
+            <div class="w-full md:w-1/3 flex flex-col items-center">
+              <div class="bg-[#00479D] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">3</div>
+              <h3 class="text-xl font-bold mb-2 text-center">施術</h3>
+            </div>
+            <div class="w-full md:w-2/3 bg-white rounded-lg shadow-md p-6">
+              <p class="text-gray-600 mb-4">
+                カウンセリングの内容をもとに、最適な施術を行います。鍼の刺激は非常に繊細で、痛みはほとんどありません。
+              </p>
+              <ul class="list-disc list-inside text-gray-600">
+                <li>清潔な使い捨ての鍼を使用します</li>
+                <li>心地よい刺激で深いリラックスを体験できます</li>
+                <li>必要に応じて電気鍼や灸も組み合わせます</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ステップ4：アフターカウンセリング -->
+          <div class="relative flex flex-col md:flex-row gap-8">
+            <div class="w-full md:w-1/3 flex flex-col items-center">
+              <div class="bg-[#00479D] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4">4</div>
+              <h3 class="text-xl font-bold mb-2 text-center">アフターカウンセリング</h3>
+            </div>
+            <div class="w-full md:w-2/3 bg-white rounded-lg shadow-md p-6">
+              <p class="text-gray-600 mb-4">
+                施術後の感想をお伺いし、今後の治療計画や生活上の注意点についてお話しします。
+              </p>
+              <ul class="list-disc list-inside text-gray-600">
+                <li>施術後の変化について確認します</li>
+                <li>ホームケアのアドバイスをお伝えします</li>
+                <li>次回の予約を承ります</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/menu-detail" class="btn-primary">
+            メニュー詳細に戻る
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout> 

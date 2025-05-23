@@ -1,11 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+import FirstView from '../components/FirstView.astro';
+import Menu from '../components/Menu.astro';
+import Concerns from '../components/Concerns.astro';
+import Access from '../components/Access.astro';
+import ReserveBtn from '../components/ReserveBtn.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+  title="鍼灸院BiO | 自然治癒力を高める鍼灸施術" 
+  description="鍼灸院BiOは、自然治癒力を高める鍼灸施術を提供しています。痛みや不調の根本原因にアプローチし、心身の健康をサポートします。">
+  
+  <main>
+	<section id="first-view" class="pt-10 bg-[#f5f5ef]">
+		<div class="container mx-auto px-4">
+		  <FirstView />
+		</div>
+	  </section>
+
+    <section id="first-view" class="py-10 bg-[#f5f5ef]">
+      <div class="container mx-auto px-4">
+        <Hero />
+      </div>
+      </section>
+
+    <section id="about" class="py-10 bg-[#f5f5ef]">
+      <div class="container mx-auto px-4">
+        <Concerns />
+      </div>
+    </section>
+    
+    <section id="menu" class="py-10 bg-[#575d64]">
+      <div class="container mx-auto px-4">
+        <Menu />
+      </div>
+    </section>
+    
+    <section id="faq" class="py-10 bg-[#f5f5ef]">
+      <div class="container mx-auto px-4">
+        <FAQ />
+      </div>
+    </section>
+
+    <section id="contact"class="py-10 bg-[#f5f5ef]">
+      <div class="container mx-auto px-4">
+        <Access />
+      </div>
+    </section>
+    <ReserveBtn />
+
+  </main>
 </Layout>
+

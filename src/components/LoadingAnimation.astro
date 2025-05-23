@@ -1,0 +1,73 @@
+ <div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#f2f2e8]">
+    <!-- Google Fonts の読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <div class="animation-container text-center max-w-xs">
+      <img src="./images/bio_logo.svg" alt="鍼灸院 BiO" width="200" height="auto" class="mx-auto opacity-0 transform scale-95" id="logo-img">
+      <div class="mt-4 opacity-0" id="title-container">
+        <div class="flex flex-col gap-1">
+          <span class="text-sm font-light tracking-wider text-[#31312f] font-mincho">鍼灸院</span>
+          <span class="text-2xl font-light tracking-wider text-[#0059d6]">BiO</span>
+        </div>
+        <h1 class="text-xl font-light leading-tight tracking-wider text-[#31312f] mt-4 font-mincho">
+          整う。<span class="mt-1 inline-block">心と身体</span>
+        </h1>
+        <p class="text-[#0059d6] mt-2 text-lg leading-relaxed">
+          Be&nbsp;in&nbsp;Order
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .font-mincho {
+      font-family: 'Shippori Mincho', serif;
+    }
+
+    #loading-screen {
+      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    }
+    
+    #logo-img {
+      animation: fadeInScale 1s ease-out 0.5s forwards;
+    }
+    
+    #title-container {
+      animation: fadeIn 1s ease-out 1.5s forwards;
+    }
+    
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      
+      // コンテンツが読み込まれたら、3秒後にローディング画面をフェードアウト
+      setTimeout(() => {
+        if (loadingScreen) {
+          loadingScreen.style.opacity = '0';
+          loadingScreen.style.visibility = 'hidden';
+        }
+      }, 3000);
+    });
+  </script>
+  

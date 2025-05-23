@@ -1,0 +1,134 @@
+<header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+    
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    
+    <!-- ロゴと院名 -->
+    <a href="/" class="flex items-center gap-3">
+        <img src="/images/bio_logo-2.png" alt="鍼灸院 BiO" width="80" height="80" class="p-1" id="logo-img">
+      <div class="hidden lg:flex gap-2 items-start">
+        <span class="text-sm font-light tracking-widest text-gray-800">鍼灸院</span>
+        <span class="text-3xl font-light tracking-widest text-[#0059d6]">BiO</span>
+      </div>
+    </a>
+    
+    <!-- デスクトップナビゲーション -->
+    <nav class="hidden lg:flex items-center space-x-8">
+      <a href="/" class="text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">ホーム</a>
+      <a href="/first-time" class="text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">初めての方へ</a>
+      <a href="/menu-detail" class="text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">メニュー</a>
+      <a href="/#faq" class="text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">よくある質問</a>
+      <a href="/#contact" class="text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">アクセス</a>
+    </nav>
+
+    <!-- 予約・SNSボタン（PCのみ） -->
+    <nav class="hidden lg:flex items-center space-x-2">
+      <a href="https://carecle.com/booking/shinkyu_BiO" target="_blank" class="flex items-center justify-center bg-[#00479D] text-white px-4 py-2 rounded-full hover:bg-[#0055bd] transition-colors text-sm">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        <span class="tracking-wider">Web予約</span>
+      </a>
+      <a href="https://line.me/ti/p/@616nutul" target="_blank" class="flex items-center justify-center bg-[#00B900] text-white px-4 py-2 rounded-full hover:bg-[#00c900] transition-colors text-sm">
+        <img src="src/images/LINE_Brand_icon.png" alt="LINE" class="w-4 h-4 mr-2">
+        <span class="tracking-wider">LINE</span>
+      </a>
+      <a href="https://www.instagram.com/bio_miyazaki_shinkyu/" target="_blank" class="flex items-center justify-center text-gray-700 px-1 py-1 rounded-full hover:text-[#E4405F] transition-colors text-sm border border-gray-100">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </a>
+    </nav>
+    
+    <!-- モバイルメニューボタン -->
+    <button id="menu-toggle" class="lg:hidden p-2 text-gray-700">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- トグルメニュー -->
+  <div id="mobile-menu" class="hidden bg-white/95 backdrop-blur-md border-t border-gray-100">
+    <div class="container mx-auto px-4 py-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="/" class="block py-2 text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">ホーム</a>
+        <a href="/first-time" class="block py-2 text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">初めての方へ</a>
+        <a href="/menu-detail" class="block py-2 text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">メニュー</a>
+        <a href="/#faq" class="block py-2 text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">よくある質問</a>
+        <a href="/#access" class="block py-2 text-gray-700 hover:text-[#0059d6] transition-colors relative nav-link">アクセス</a>
+      </nav>
+      
+      <!-- 予約・SNSボタン -->
+      <div class="flex flex-col space-y-3 mt-6 pb-4">
+        <a href="https://www.instagram.com/bio_miyazaki_shinkyu/" target="_blank" class="flex items-center justify-center text-gray-700 px-4 py-3 rounded-full hover:text-[#E4405F] transition-colors text-sm border border-gray-200">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span class="tracking-wider">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    transition: all 0.3s ease;
+  }
+
+  .header-scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ナビゲーションリンクのホバーエフェクト */
+  .nav-link {
+    position: relative;
+    padding-bottom: 2px;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #0059d6;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* スマホ・タブレット用の余白調整 */
+  @media (max-width: 1024px) {
+    :global(body) {
+      padding-bottom: 5rem;
+    }
+  }
+</style>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (!header) return;
+    
+    if (window.scrollY > 0) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+  });
+</script>

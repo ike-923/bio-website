@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+:root {
+  --primary-color: #00479D;
+  --background-color: #FFFFFF;
+  --dark-background: #324052;
+  --text-color: #333333;
+}
+
+body {
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn-primary {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #324052;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* 背景が暗い場合のsection-title */
+.bg-\[\#324052\] .section-title,
+.bg-\[\#575d64\] .section-title {
+  color: #f5f5ef;
+}
+
