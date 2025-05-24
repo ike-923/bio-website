@@ -1,5 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import image1 from '../assets/4.jpg';
+import image2 from '../assets/24.jpg';
+import image3 from '../assets/25.jpg';
+import image4 from '../assets/19.jpg';
+import image5 from '../assets/13.jpg';
+import image6 from '../assets/22.jpg';
+import image7 from '../assets/2.jpg';
+import image8 from '../assets/18.jpg';
+import image9 from '../assets/14.jpg';
+import image10 from '../assets/3.jpg';
 ---
 
 <Layout 
@@ -114,7 +125,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="hari" class="bg-white rounded-lg shadow-md p-8 mb-8 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/4.jpg" alt="鍼施術" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image1}
+                    alt="鍼施術"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">鍼施術</h3>
@@ -133,7 +150,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="seitai" class="bg-white rounded-lg shadow-md p-8 mb-8 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/24.jpg" alt="整体施術" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image2}
+                    alt="整体施術"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">整体施術</h3>
@@ -152,7 +175,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="shinkei" class="bg-white rounded-lg shadow-md p-8 mb-8 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/25.jpg" alt="神経整体" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image3}
+                    alt="神経整体"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">神経整体</h3>
@@ -171,7 +200,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="suidama" class="bg-white rounded-lg shadow-md p-8 mb-8 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/19.jpg" alt="吸い玉" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image4}
+                    alt="吸い玉"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">吸い玉</h3>
@@ -196,7 +231,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="facial" class="bg-white rounded-lg shadow-md p-8 mb-12 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/13.jpg" alt="お顔の鍼" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image5}
+                    alt="お顔の鍼"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">お顔の鍼</h3>
@@ -224,7 +265,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="symptoms" class="bg-white rounded-lg shadow-md p-8 mb-8 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/22.jpg" alt="症状改善特化コース" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image6}
+                    alt="症状改善特化コース"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">症状改善特化コース</h3>
@@ -260,10 +307,22 @@ import Layout from '../layouts/Layout.astro';
               <div class="flex flex-col md:flex-row gap-6 items-center">
                 <div class="md:w-1/2 flex flex-col gap-10">
                   <div class="">
-                    <img src="/src/images/2.jpg" alt="メンテナンスコース" class="w-full h-64 object-cover rounded-lg"/>
+                    <Image
+                      src={image7}
+                      alt="メンテナンスコース"
+                      class="w-full h-64 object-cover rounded-lg"
+                      width={600}
+                      height={400}
+                    />
                   </div>
                   <div class="">
-                    <img src="/src/images/18.jpg" alt="メンテナンスコース" class="w-full h-64 object-cover rounded-lg"/>
+                    <Image
+                      src={image8}
+                      alt="メンテナンスコース"
+                      class="w-full h-64 object-cover rounded-lg"
+                      width={600}
+                      height={400}
+                    />
                   </div>
                 </div>
                
@@ -345,7 +404,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="facial-course" class="bg-white rounded-lg shadow-md p-8 mb-8 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/14.jpg" alt="お顔の鍼コース" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image9}
+                    alt="お顔の鍼コース"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">お顔の鍼コース</h3>
@@ -370,7 +435,13 @@ import Layout from '../layouts/Layout.astro';
             <div id="all-in-one" class="bg-white rounded-lg shadow-md p-8 scroll-mt-24">
               <div class="flex flex-col md:flex-row gap-6">
                 <div class="md:w-1/2">
-                  <img src="/src/images/3.jpg" alt="オールインワンコース" class="w-full h-64 object-cover rounded-lg"/>
+                  <Image
+                    src={image10}
+                    alt="オールインワンコース"
+                    class="w-full h-64 object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                  />
                 </div>
                 <div class="md:w-1/2">
                   <h3 class="text-xl font-bold text-[#00479D] mb-4">オールインワンコース</h3>

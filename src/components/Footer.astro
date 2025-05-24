@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import lineIcon from '../assets/LINE_Brand_icon.png';
+import bioLogo from '../assets/bio_logo-2.png';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -12,7 +15,13 @@ const currentYear = new Date().getFullYear();
         </div>
         <div class="flex space-x-4">
           <a href="https://line.me/ti/p/@616nutul" target="_blank" class="text-white hover:text-[#00B900] transition-colors">
-            <img src="/src/images/LINE_Brand_icon.png" alt="LINE" class="w-7 h-7">
+            <Image
+              src={lineIcon}
+              alt="LINE"
+              class="w-7 h-7"
+              width={28}
+              height={28}
+            />
           </a>
           <a href="https://www.instagram.com/bio_miyazaki_shinkyu/" target="_blank" class="text-white hover:text-[#E4405F] transition-colors">
             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +48,13 @@ const currentYear = new Date().getFullYear();
         <div class="space-y-2">
           <p class="text-gray-300 text-base"><span class="font-medium">TEL:</span> 0985-XX-XXXX</p>
           <a href="https://line.me/ti/p/@616nutul" target="_blank" class="mt-2 inline-flex items-center text-gray-300 hover:text-white transition-colors text-base">
-            <img src="/src/images/LINE_Brand_icon.png" alt="LINE" class="w-7 h-7 mr-1">
+            <Image
+              src={lineIcon}
+              alt="LINE"
+              class="w-7 h-7 mr-1"
+              width={28}
+              height={28}
+            />
             公式LINE
           </a>
         </div>

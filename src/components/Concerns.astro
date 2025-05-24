@@ -1,4 +1,12 @@
-
+---
+import { Image } from 'astro:assets';
+import image1 from '../assets/20.jpg';
+import image2 from '../assets/22.jpg';
+import image3 from '../assets/21.jpg';
+import image4 from '../assets/27.jpg';
+import image5 from '../assets/26.jpg';
+import image6 from '../assets/13.jpg';
+---
   <div class="container mx-auto px-4 relative">
    <div class="p-10 md:flex md:justify-between">
     <div class="text-start mb-5">
@@ -17,7 +25,13 @@
       <!-- 肩こり・首こり -->
       <div class="bg-white p-8 rounded-lg">
         <div class="mb-6">
-          <img src="/src/images/20.jpg" alt="肩こり・首こり" class="w-32 h-32 mx-auto rounded-full object-cover"/>
+          <Image
+            src={image1}
+            alt="肩こり・首こり"
+            class="w-32 h-32 mx-auto rounded-full object-cover"
+            width={128}
+            height={128}
+          />
         </div>
         <h4 class="text-center mb-4 font-medium">肩こり・首こり</h4>
         <p class="text-sm text-center mb-4">
@@ -29,7 +43,13 @@
       <!-- 腰痛 -->
       <div class="bg-white p-8 rounded-lg">
         <div class="mb-6">
-          <img src="/src/images/22.jpg" alt="腰痛" class="w-32 h-32 mx-auto rounded-full object-cover"/>
+          <Image
+            src={image2}
+            alt="腰痛"
+            class="w-32 h-32 mx-auto rounded-full object-cover"
+            width={128}
+            height={128}
+          />
         </div>
         <h4 class="text-center mb-4 font-medium">腰痛</h4>
         <p class="text-sm text-center mb-4">
@@ -41,7 +61,13 @@
       <!-- 頭痛・めまい -->
       <div class="bg-white p-8 rounded-lg">
         <div class="mb-6">
-          <img src="/src/images/21.jpg" alt="頭痛・めまい" class="w-32 h-32 mx-auto rounded-full object-cover"/>
+          <Image
+            src={image3}
+            alt="頭痛・めまい"
+            class="w-32 h-32 mx-auto rounded-full object-cover"
+            width={128}
+            height={128}
+          />
         </div>
         <h4 class="text-center mb-4 font-medium">頭痛・めまい</h4>
         <p class="text-sm text-center mb-4">
@@ -53,7 +79,13 @@
       <!-- 自律神経失調症 -->
       <div class="bg-white p-8 rounded-lg">
         <div class="mb-6">
-          <img src="/src/images/27.jpg" alt="自律神経失調症" class="w-32 h-32 mx-auto rounded-full object-cover"/>
+          <Image
+            src={image4}
+            alt="自律神経失調症"
+            class="w-32 h-32 mx-auto rounded-full object-cover"
+            width={128}
+            height={128}
+          />
         </div>
         <h4 class="text-center mb-4 font-medium">自律神経失調症</h4>
         <p class="text-sm text-center mb-4">
@@ -65,7 +97,13 @@
       <!-- スポーツ障害 -->
       <div class="bg-white p-8 rounded-lg">
         <div class="mb-6">
-          <img src="/src/images/26.jpg" alt="スポーツ障害" class="w-32 h-32 mx-auto rounded-full object-cover"/>
+          <Image
+            src={image5}
+            alt="スポーツ障害"
+            class="w-32 h-32 mx-auto rounded-full object-cover"
+            width={128}
+            height={128}
+          />
         </div>
         <h4 class="text-center mb-4 font-medium">スポーツ障害</h4>
         <p class="text-sm text-center mb-4">
@@ -77,7 +115,13 @@
       <!-- 美容鍼 -->
       <div class="bg-white p-8 rounded-lg">
         <div class="mb-6">
-          <img src="/src/images/13.jpg" alt="美容鍼" class="w-32 h-32 mx-auto rounded-full object-cover"/>
+          <Image
+            src={image6}
+            alt="美容鍼"
+            class="w-32 h-32 mx-auto rounded-full object-cover"
+            width={128}
+            height={128}
+          />
         </div>
         <h4 class="text-center mb-4 font-medium">お顔のお悩み</h4>
         <p class="text-sm text-center mb-4">

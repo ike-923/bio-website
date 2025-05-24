@@ -1,5 +1,10 @@
 ---
-// ReservationCardのインポートを削除
+import { Image } from 'astro:assets';
+import image1 from '../assets/6.jpg';
+import image2 from '../assets/9.jpg';
+import image3 from '../assets/2.jpg';
+import image4 from '../assets/14.jpg';
+import image5 from '../assets/19.jpg';
 ---
 
   <div class="container relative min-h-[300px] lg:min-h-[70vh]">
@@ -29,19 +34,49 @@
     <div class="w-full lg:w-[80%] h-[300px] md:h-[400px] lg:h-[70vh] absolute right-0 top-0">
       <div class="slideshow-container w-full h-full">
         <div class="slide active">
-          <img src="/images/6.jpg" alt="スライド1" class="w-full h-full object-cover">
+          <Image
+            src={image1}
+            alt="スライド1"
+            class="w-full h-full object-cover"
+            width={1200}
+            height={800}
+          />
         </div>
         <div class="slide">
-          <img src="/images/9.jpg" alt="スライド2" class="w-full h-full object-cover">
+          <Image
+            src={image2}
+            alt="スライド2"
+            class="w-full h-full object-cover"
+            width={1200}
+            height={800}
+          />
         </div>
         <div class="slide">
-          <img src="/images/2.jpg" alt="スライド3" class="w-full h-full object-cover">
+          <Image
+            src={image3}
+            alt="スライド3"
+            class="w-full h-full object-cover"
+            width={1200}
+            height={800}
+          />
         </div>
         <div class="slide">
-          <img src="/images/14.jpg" alt="スライド4" class="w-full h-full object-cover">
+          <Image
+            src={image4}
+            alt="スライド4"
+            class="w-full h-full object-cover"
+            width={1200}
+            height={800}
+          />
         </div>
         <div class="slide">
-          <img src="/images/19.jpg" alt="スライド5" class="w-full h-full object-cover">
+          <Image
+            src={image5}
+            alt="スライド5"
+            class="w-full h-full object-cover"
+            width={1200}
+            height={800}
+          />
         </div>
       </div>
       <!-- 画像の上にグラデーションオーバーレイを追加 -->

@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+import lineIcon from '../assets/LINE_Brand_icon.png';
+---
 <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
     
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -29,7 +33,13 @@
         <span class="tracking-wider">Web予約</span>
       </a>
       <a href="https://line.me/ti/p/@616nutul" target="_blank" class="flex items-center justify-center bg-[#00B900] text-white px-4 py-2 rounded-full hover:bg-[#00c900] transition-colors text-sm">
-        <img src="src/images/LINE_Brand_icon.png" alt="LINE" class="w-4 h-4 mr-2">
+        <Image
+          src={lineIcon}
+          alt="LINE"
+          class="w-4 h-4 mr-2"
+          width={16}
+          height={16}
+        />
         <span class="tracking-wider">LINE</span>
       </a>
       <a href="https://www.instagram.com/bio_miyazaki_shinkyu/" target="_blank" class="flex items-center justify-center text-gray-700 px-1 py-1 rounded-full hover:text-[#E4405F] transition-colors text-sm border border-gray-100">
