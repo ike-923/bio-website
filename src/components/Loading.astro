@@ -1,0 +1,32 @@
+<div id="loading" class="fixed inset-0 bg-white z-50 flex items-center justify-center" style="display: none;">
+  <div class="text-center">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-[#00479D] mx-auto"></div>
+    <p class="mt-4 text-[#00479D] font-mincho">Loading...</p>
+  </div>
+</div>
+
+<script>
+  // 初回ロード時のみローディングを表示
+  if (!sessionStorage.getItem('hasLoaded')) {
+    const loading = document.getElementById('loading');
+    if (loading) {
+      loading.style.display = 'flex';
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          loading.style.opacity = '0';
+          loading.style.transition = 'opacity 0.5s ease-out';
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 500);
+        }, 1000);
+      });
+    }
+    sessionStorage.setItem('hasLoaded', 'true');
+  }
+</script>
+
+<style>
+  .font-mincho {
+    font-family: 'Shippori Mincho', serif;
+  }
+</style> 

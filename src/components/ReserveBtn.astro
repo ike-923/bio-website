@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+import lineIcon from '../assets/LINE_Brand_icon.png';
+---
 <div class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 p-3 lg:hidden z-[100] shadow-[0_-1px_3px_rgba(0,0,0,0.1)]">
     <div class="flex justify-between items-center gap-3 max-w-lg mx-auto px-4">
       <a href="https://carecle.com/booking/shinkyu_BiO" target="_blank" class="flex-1 flex items-center justify-center bg-[#00479D] text-white px-4 py-3 rounded-full hover:bg-[#0055bd] transition-colors text-sm font-medium">
@@ -7,7 +11,13 @@
         <span class="tracking-wider">Web予約</span>
       </a>
       <a href="https://line.me/ti/p/@616nutul" target="_blank" class="flex-1 flex items-center justify-center bg-[#00B900] text-white px-4 py-3 rounded-full hover:bg-[#00c900] transition-colors text-sm font-medium">
-        <img src="src/images/LINE_Brand_icon.png" alt="LINE" class="w-4 h-4 mr-2">
+        <Image
+              src={lineIcon}
+              alt="LINE"
+              class="w-7 h-7 mr-1"
+              width={28}
+              height={28}
+            />
         <span class="tracking-wider">LINE予約</span>
       </a>
     </div>
