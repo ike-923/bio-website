@@ -10,6 +10,7 @@ import Menu from '../components/Menu.astro';
 import Concerns from '../components/Concerns.astro';
 import Access from '../components/Access.astro';
 import ReserveBtn from '../components/ReserveBtn.astro';
+import Loading from '../components/Loading.astro';
 ---
 
 <Layout 
@@ -19,6 +20,7 @@ import ReserveBtn from '../components/ReserveBtn.astro';
   <main>
 	<section id="first-view" class="pt-10 bg-[#f5f5ef]">
 		<div class="container mx-auto px-4">
+		  <Loading />
 		  <FirstView />
 		</div>
 	  </section>
