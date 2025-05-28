@@ -1,91 +1,73 @@
-<div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#f2f2e8]">
-    <!-- Google Fonts の読み込み -->
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <div class="animation-container text-center max-w-xs">
-      <img src="./images/bio_logo.svg" alt="鍼灸院 BiO" width="200" height="auto" class="mx-auto opacity-0 transform scale-95" id="logo-img">
-      <div class="mt-4 opacity-0" id="title-container">
-        <div class="flex flex-col gap-1">
-          <span class="text-sm font-light tracking-wider text-[#31312f] font-mincho">鍼灸院</span>
-          <span class="text-2xl font-light tracking-wider text-[#0059d6]">BiO</span>
+<div id="loading-screen" class="fixed inset-0 bg-[#f2f2e8] z-50 flex flex-col items-center justify-center">
+    <div class="text-center">
+        <div class="logo-container mb-4">
+            <img src="/images/bio_logo-2.png" alt="Bio" class="w-32 h-32 object-contain logo-animation">
         </div>
-        <h1 class="text-xl font-light leading-tight tracking-wider text-[#31312f] mt-4 font-mincho">
-          整う。<span class="mt-1 inline-block">心と身体</span>
-        </h1>
-        <p class="text-[#0059d6] mt-2 text-lg leading-relaxed">
-          Be&nbsp;in&nbsp;Order
-        </p>
-      </div>
+        <h1 class="text-2xl font-bold title-animation font-mincho">Bio</h1>
+        <p class="text-xl font-mincho text-[#0059d6]">整う、心と身体</p>
     </div>
 </div>
 
 <script>
-  // 初回ロード時のみローディングを表示
-  if (!sessionStorage.getItem('hasLoaded')) {
-    const loadingScreen = document.getElementById('loading-screen');
-    if (loadingScreen) {
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          loadingScreen.style.opacity = '0';
-          loadingScreen.style.transition = 'opacity 0.5s ease-out';
-          setTimeout(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        
+        if (!loadingScreen) return;
+        
+        // 初回ロード時のみローディングを表示
+        if (!sessionStorage.getItem('hasLoaded')) {
+            // ページ読み込み完了後、2秒後にフェードアウト
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    loadingScreen.style.transition = 'opacity 0.8s ease-out';
+                    loadingScreen.style.opacity = '0';
+                    
+                    // フェードアウト完了後、要素を非表示
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 800);
+                }, 2000);
+            });
+            
+            // 初回ロードを記録
+            sessionStorage.setItem('hasLoaded', 'true');
+        } else {
+            // 2回目以降のロード時は即座に非表示
             loadingScreen.style.display = 'none';
-          }, 500);
-        }, 800);
-      });
-    }
-    sessionStorage.setItem('hasLoaded', 'true');
-  } else {
-    // 2回目以降はローディングを非表示
-    const loadingScreen = document.getElementById('loading-screen');
-    if (loadingScreen) {
-      loadingScreen.style.display = 'none';
-    }
-  }
-
-  // ページ遷移時にローディングを非表示
-  document.addEventListener('astro:before-swap', () => {
-    const loadingScreen = document.getElementById('loading-screen');
-    if (loadingScreen) {
-      loadingScreen.style.display = 'none';
-    }
-  });
+        }
+        
+        // ページ遷移時にローディングを非表示
+        document.addEventListener('astro:before-swap', () => {
+            loadingScreen.style.display = 'none';
+        });
+    });
 </script>
 
 <style>
-  .font-mincho {
-    font-family: 'Shippori Mincho', serif;
-  }
-
-  #loading-screen {
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-  }
-  
-  #logo-img {
-    animation: fadeInScale 1.2s ease-out 0.5s forwards;
-  }
-  
-  #title-container {
-    animation: fadeIn 1.2s ease-out 1.8s forwards;
-  }
-  
-  @keyframes fadeInScale {
-    0% {
-      opacity: 0;
-      transform: scale(0.95);
+    @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap');
+    
+    .font-mincho {
+        font-family: 'Shippori Mincho', serif;
     }
-    100% {
-      opacity: 1;
-      transform: scale(1);
+    
+    .logo-animation {
+        animation: fadeIn 1.5s ease-out;
     }
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
+    
+    .title-animation {
+        animation: fadeIn 1.5s ease-out 2s;
+        opacity: 0;
+        animation-fill-mode: forwards;
     }
-    100% {
-      opacity: 1;
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-  }
 </style>
