@@ -1,10 +1,12 @@
 <div id="loading-screen" class="fixed inset-0 bg-[#f2f2e8] z-50 flex flex-col items-center justify-center">
-    <div class="text-center">
-        <div class="logo-container mb-4">
+    <div class="text-center flex flex-col items-center">
+        <div class="logo-container mb-4 flex justify-center">
             <img src="/images/bio_logo-2.png" alt="Bio" class="w-32 h-32 object-contain logo-animation">
         </div>
-        <h1 class="text-2xl font-bold title-animation font-mincho">Bio</h1>
-        <p class="text-xl font-mincho text-[#0059d6]">整う、心と身体</p>
+        <div class="title-container text-center">
+            <h1 class="text-2xl font-bold font-mincho">BiO</h1>
+            <p class="text-xl font-mincho text-[#0059d6]">整う、心と身体</p>
+        </div>
     </div>
 </div>
 
@@ -52,12 +54,6 @@
     
     .logo-animation {
         animation: fadeIn 1.5s ease-out;
-    }
-    
-    .title-animation {
-        animation: fadeIn 1.5s ease-out 2s;
-        opacity: 0;
-        animation-fill-mode: forwards;
     }
     
     @keyframes fadeIn {
